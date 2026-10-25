@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+   <title>Navbar Cazt</title>
+</head>
+<body>
+   <header>
+      <input type="checkbox" id="nav_toggle" class="nav-checkbox">
+      <nav class="nav">
+         <div class="logo">Wirya</div>
+            <label for="nav_toggle" class="nav-toggle">
+               <i class="fas fa-bars open-icon"></i>
+               <i class="fas fa-xmark close-icon"></i>
+            </label>
+
+         <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tentang">About</a></li>
+            <li><a href="#keterampilan">Skill</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+      </nav>
+
+      <div class="dropdown">
+         <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tentang">About</a></li>
+            <li><a href="#keterampilan">Skill</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+      </div>
+   </header>
+   
+   
+   <script>
+     const toggle = document.getElementById('nav_toggle');
+     const links = document.querySelectorAll('.dropdown a');
+   
+     links.forEach(link => {
+       link.addEventListener('click', () => {
+         toggle.checked = false; 
+       });
+     });
+</script>
+   </body>
+   </html>
